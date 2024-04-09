@@ -1,3 +1,33 @@
+/*
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ * 
+ * As regards GPLv3: https://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+/*
+ * Create a character device, roll a d_size die (<= 9) and print the output to the user.
+ * Minimal example to show driver and uiomove operation,
+ *
+ * 1) partially based on the echo pseudo-device KLD presented in the FreeBSD
+ * Architecture Handbook:
+ * https://docs.freebsd.org/en/books/arch-handbook/driverbasics/
+ *
+ * 2) but also written with the fundamental suggestions of this message:
+ * https://lists.freebsd.org/archives/freebsd-hackers/2024-April/003146.html
+ *
+ */
+
 #include <sys/types.h>
 #include <sys/systm.h>
 #include <sys/param.h>
